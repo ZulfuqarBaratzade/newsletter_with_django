@@ -13,7 +13,7 @@ def index(request):
         if form.is_valid():
             subscriber = form.save()
             context = {'email':subscriber.email}
-            email_content = render_to_string('main/subscription_thank_you.html',context)
+            email_content = render_to_string('core/subscription_thank_you.html',context)
             email_subject = 'Thank you for Subscribing'
             recipient_list = [subscriber.email]
             from_email = settings.EMAIL_HOST_USER
@@ -28,5 +28,5 @@ def index(request):
             return render(request,'core/thank_you.html',context)
     else:
         form = SubscriberForm()
-    return render(request,'main/index.html',{'form':form})
+    return render(request,'core/index.html',{'form':form})
     

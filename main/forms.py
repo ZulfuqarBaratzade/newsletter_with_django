@@ -2,7 +2,7 @@ from django import forms
 from .models import Subscriber
 
 
-class SubscriberForm(forms.ModeForm):
+class SubscriberForm(forms.ModelForm):
     class Meta:
         model = Subscriber
-        field = ['email']
+        fields = ['email']
