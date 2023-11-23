@@ -123,3 +123,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#You can write your email details
+
+EMAIL_HOST = "examplate@email"
+EMAIL_HOST_USR="examplesomeone"
+EMAIL_HOST_PASSWORD ="testest123"
+EMAIL_PORT = '2525'
